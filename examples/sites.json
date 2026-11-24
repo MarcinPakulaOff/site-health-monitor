@@ -1,0 +1,12 @@
+{
+  "title": "example.com monitor",
+  "user_agent": "Mozilla/5.0 (compatible; site-health-monitor/0.1)",
+  "fail_after": 2,
+  "http": [
+    {"name": "home", "url": "https://example.com/", "contains": "Example Domain", "max_ms": 3000},
+    {"name": "api", "url": "https://example.com/api/status", "expect": [200]}
+  ],
+  "ssl": ["example.com"],
+  "ssl_warn_days": 14,
+  "sitemap": {"url": "https://example.com/sitemap.xml", "min_urls": 10}
+}
